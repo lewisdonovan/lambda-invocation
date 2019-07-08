@@ -23,9 +23,11 @@ export default () => {
     lambda.invoke(lambdaParams, function(error, data) {
         if (error) {
             console.error(error)
+            //TODO: Add error-handling here
         } else {
             console.log('Status code ->', data.StatusCode)
             console.log('Response object ->', JSON.parse(data.Payload) )
+            //TODO: Process the contents of the payload object and update the UI
         }
     })
 }
