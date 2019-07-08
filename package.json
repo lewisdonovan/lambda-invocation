@@ -1,0 +1,15 @@
+{
+  "name": "lambda-invocation",
+  "version": "1.0.0",
+  "author": "Lewis Donovan <lewis.donovan@sonymusic.com> (http://github.com/lewisdonovan)",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.470.0",
+    "dotenv-webpack": "^1.7.0",
+    "webpack": "^4.33.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.3"
+  }
+}
