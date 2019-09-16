@@ -2,7 +2,7 @@ import AWS from 'aws-sdk'
 
 //AWS config
 AWS.config.update({
-    region: 'us-east-1',
+    region: 'eu-west-2',
     credentials: {
         accessKeyId: process.env.AWS_ACCESS_KEY,
         secretAccessKey: process.env.AWS_SECRET_KEY
@@ -16,7 +16,10 @@ export default () => {
         FunctionName : process.env.AWS_LAMBDA_FUNCTION,
         InvocationType : "RequestResponse",
         LogType : "None",
-        Payload : JSON.stringify(window.aeJS)
+        Payload : JSON.stringify({
+            user: window.aeJS.user,
+            segment: "30" // Replace with the ID of the segment the user falls into from the quiz results
+        })
     }
 
     //Run the function
